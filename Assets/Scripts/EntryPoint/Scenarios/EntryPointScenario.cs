@@ -1,0 +1,17 @@
+﻿using Jelewow.DNK.Player.MonoBehaviours;
+using Jelewow.DNK.Player.Services;
+using Zenject;
+
+namespace Jelewow.DNK.EntryPoint.Scenarios
+{
+    public class EntryPointScenario : IInitializable
+    {
+        [Inject] private readonly PlayerInstanceService _playerInstanceService;
+        [Inject] private readonly PlayerSpawnPoint _playerSpawnPoint;
+        
+        public void Initialize()
+        {
+            _playerInstanceService.CreatePlayer(_playerSpawnPoint.Position);
+        }
+    }
+}
