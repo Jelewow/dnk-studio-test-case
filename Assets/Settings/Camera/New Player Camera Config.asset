@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 20
   <BorderThickness>k__BackingField: 10
-  <Border>k__BackingField: {x: 5, y: 17}
+  <Border>k__BackingField: {x: 15, y: 17}

@@ -12,17 +12,20 @@ namespace Jelewow.DNK.Player
         [SerializeField] private PlayerConfig _playerConfig;
         [SerializeField] private PlayerView _playerView;
         [SerializeField] private PlayerSpawnPoint _playerSpawnPoint;
+        [SerializeField] private PlayerInfoPopup _infoPopup;
 
         public override void InstallBindings()
         {
             Container.BindScriptableObject(_playerConfig);
             Container.BindObjectOnScene(_playerSpawnPoint);
+            Container.BindObjectOnScene(_infoPopup);
             Container.BindPrefab(_playerView);
             
             Container.BindService<PlayerInstanceService>();
             Container.BindService<PlayerInputService>();
             Container.BindService<PlayerMovementService>();
             Container.BindService<PlayerAnimationService>();
+            Container.BindService<PlayerCollectableService>();
         }
     }
 }
